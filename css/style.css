@@ -374,8 +374,8 @@ img {
 }
 
 .tier-list img {
-    width: 40px;
-    height: 40px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
     transition: none;
     transform: none;
@@ -481,8 +481,8 @@ img {
     }
 
     .tier-list img {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
         transition: none;
         transform: none;
     }
