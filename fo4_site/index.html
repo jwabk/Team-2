@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FIFA ONLINE 4</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="hero" id="top">
+        <nav class="navbar">
+            <a href="#top" class="nav-logo">FIFA ONLINE 4</a>
+
+            <ul class="nav-menu">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#players">선수</a></li>
+                <li><a href="#squad">스쿼드</a></li>
+                <li><a href="#modes">게임모드</a></li>
+                <li><a href="#tier">티어</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <div class="main-logo-box">
+                <img src="images/fifa-online4-logo.png" alt="FIFA ONLINE 4 로고" />
+            </div>
+
+            <h1>FIFA ONLINE 4</h1>
+
+            <p class="hero-description">
+                나만의 팀을 만들고, 직접 경기를 운영하며, 더 높은 순위에 도전하는 온라인 축구 게임입니다.
+            </p>
+
+            <a href="#intro" class="hero-button">사이트 둘러보기</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section light-section" id="intro">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>소개</h2>
+                </div>
+
+                <div class="intro-layout">
+                    <div class="intro-text">
+                        <h3>온라인에서 즐기는 축구 경기</h3>
+                        <p>
+                            FIFA ONLINE 4는 다양한 선수들을 활용해 자신만의 팀을 만들고,
+                            직접 경기를 플레이할 수 있는 온라인 축구 게임입니다.
+                            선수의 움직임, 전술, 경기 흐름을 생각하며 플레이하는 재미가 있습니다.
+                        </p>
+                    </div>
+
+                    <img src="images/intro-realism.jpg" alt="경기장 분위기 이미지" />
+                </div>
+            </div>
+        </section>
+
+        <section class="section dark-section" id="players">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>선수</h2>
+                </div>
+
+                <p class="section-description">
+                    선수를 클릭하면 선택한 선수의 소개글이 오른쪽에 표시됩니다.
+                </p>
+
+                <div class="player-layout">
+                    <div class="player-buttons">
+                        <button class="player-button active" data-player="son">
+                            <img src="images/son.png" alt="손흥민" />
+                        </button>
+
+                        <button class="player-button" data-player="mbappe">
+                            <img src="images/mbappe.png" alt="음바페" />
+                        </button>
+
+                        <button class="player-button" data-player="haaland">
+                            <img src="images/haaland.png" alt="홀란드" />
+                        </button>
+                    </div>
+
+                    <div class="player-info" id="playerInfo">
+                        <h3>손흥민</h3>
+                        <p>
+                            빠른 스피드와 양발 슈팅 능력이 강점인 공격수입니다.
+                            측면에서 중앙으로 파고들며 슈팅을 시도하는 플레이에 잘 어울립니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light-section" id="squad">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>스쿼드</h2>
+                </div>
+
+                <div class="squad-layout">
+                    <img src="images/squad-growth.png" alt="스쿼드 이미지" />
+
+                    <div class="squad-text">
+                        <h3>나만의 팀 구성하기</h3>
+                        <p>
+                            FIFA ONLINE 4에서는 원하는 선수들을 모아 자신만의 스쿼드를 만들 수 있습니다.
+                            선수의 포지션, 능력치, 팀 케미, 포메이션을 고려하여 팀을 구성하면
+                            더 완성도 높은 경기를 할 수 있습니다.
+                        </p>
+
+                        <div class="tag-wrap">
+                            <span>선수 영입</span>
+                            <span>강화</span>
+                            <span>팀 케미</span>
+                            <span>포메이션</span>
+                            <span>전술 설정</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section dark-section" id="modes">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>게임모드</h2>
+                </div>
+
+                <p class="section-description">
+                    게임모드 아이콘을 클릭하면 아래쪽에 선택한 모드의 설명이 표시됩니다.
+                </p>
+
+                <div class="mode-buttons">
+                    <button class="mode-button active" data-mode="rank">
+                        <img src="images/rank-match.png" alt="공식 경기" />
+                    </button>
+
+                    <button class="mode-button" data-mode="manager">
+                        <img src="images/manager-mode.png" alt="감독 모드" />
+                    </button>
+
+                    <button class="mode-button" data-mode="special">
+                        <img src="images/special-match.png" alt="스페셜 매치" />
+                    </button>
+
+                    <button class="mode-button" data-mode="volta">
+                        <img src="images/volta-live.png" alt="볼타 라이브" />
+                    </button>
+                </div>
+
+                <div class="mode-info" id="modeInfo">
+                    <h3>공식 경기</h3>
+                    <p>
+                        공식 경기는 다른 유저와 실력을 겨루는 대표적인 경쟁 모드입니다.
+                        승패에 따라 점수와 티어가 달라지기 때문에 자신의 실력을 확인하기 좋습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light-section" id="tier">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>티어</h2>
+                </div>
+
+                <p class="section-description">
+                    경기를 하며 티어를 올려 더 높은 경지에 오르세요.
+                </p>
+
+                <div class="tier-list">
+                    <img src="images/rookie.png" alt="유망주 티어" />
+                    <img src="images/semi-pro.png" alt="세미프로 티어" />
+                    <img src="images/pro.png" alt="프로 티어" />
+                    <img src="images/world-class.png" alt="월드클래스 티어" />
+                    <img src="images/challenger.png" alt="챌린저 티어" />
+                    <img src="images/champions.png" alt="챔피언스 티어" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>FIFA ONLINE 4 소개 사이트 · 고등학교 1학년 웹사이트 제작 예시</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
