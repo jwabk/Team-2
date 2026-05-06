@@ -1,0 +1,493 @@
+:root {
+    --main-color: #FFFFFF;
+    --point-color: #00FF85;
+
+    --black-color: #05070A;
+    --white-color: #FFFFFF;
+    --dark-text: #111111;
+    --gray-text: #666666;
+    --light-gray: #E8E8E8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 24px 7%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.82)),
+        url("../images/background.png") center / cover no-repeat;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-logo {
+    color: var(--point-color);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    font-size: 15px;
+}
+
+.nav-menu a {
+    color: var(--main-color);
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--point-color);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-logo-box {
+    width: 190px;
+    margin-bottom: 28px;
+}
+
+.main-logo-box img {
+    object-fit: contain;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 9vw, 108px);
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.hero-description {
+    max-width: 680px;
+    color: #D7D7D7;
+    font-size: 18px;
+    margin-bottom: 34px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--point-color);
+    color: #05100B;
+    font-weight: 900;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 255, 133, 0.25);
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-inner {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+.light-section {
+    background-color: var(--white-color);
+    color: var(--dark-text);
+}
+
+.dark-section {
+    background-color: var(--black-color);
+    color: var(--main-color);
+}
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.section-description {
+    max-width: 760px;
+    margin-bottom: 34px;
+    color: var(--gray-text);
+}
+
+.dark-section .section-description {
+    color: #BDBDBD;
+}
+
+.intro-layout,
+.squad-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    align-items: center;
+}
+
+.intro-text h3,
+.squad-text h3,
+.player-info-content h3,
+.mode-info h3 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.intro-text p,
+.squad-text p,
+.mode-info p {
+    font-size: 17px;
+    color: var(--gray-text);
+}
+
+.dark-section .mode-info p {
+    color: #D0D0D0;
+}
+
+.intro-layout img,
+.squad-layout img {
+    height: 330px;
+    object-fit: cover;
+}
+
+.player-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.player-buttons {
+    display: flex;
+    gap: 24px;
+}
+
+.player-button {
+    width: 31%;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.player-button img {
+    height: 360px;
+    object-fit: cover;
+}
+
+.player-button:hover {
+    transform: translateY(-6px);
+}
+
+.player-button.active {
+    opacity: 1;
+}
+
+.player-button.dimmed {
+    opacity: 0.35;
+}
+
+.player-info {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+    border-left: 4px solid var(--point-color);
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+}
+
+.player-info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(5, 7, 10, 0.96) 0%,
+            rgba(5, 7, 10, 0.84) 45%,
+            rgba(5, 7, 10, 0.58) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.player-card-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.player-card-bg img {
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    opacity: 1;
+    transform: translateY(80px);
+}
+
+.player-card-bg img.animate {
+    animation: playerCardRise 0.7s ease forwards;
+}
+
+@keyframes playerCardRise {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.player-info-content {
+    position: relative;
+    z-index: 3;
+    max-width: 520px;
+}
+
+.player-info-content h3 {
+    color: var(--main-color);
+}
+
+.player-info-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #D0D0D0;
+}
+
+.tag-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.tag-wrap span {
+    padding: 8px 14px;
+    border: 1px solid var(--point-color);
+    color: var(--dark-text);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.mode-button {
+    width: 120px;
+    height: 120px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mode-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mode-button:hover {
+    transform: translateY(-6px);
+}
+
+.mode-button.active {
+    opacity: 1;
+}
+
+.mode-button.dimmed {
+    opacity: 0.35;
+}
+
+.mode-info {
+    max-width: 800px;
+    border-top: 4px solid var(--point-color);
+    padding-top: 24px;
+}
+
+.tier-list {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tier-list img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    transition: none;
+    transform: none;
+}
+
+.tier-list img:hover {
+    transform: none;
+}
+
+.footer {
+    padding: 30px 7%;
+    text-align: center;
+    background-color: var(--black-color);
+    color: #BBBBBB;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+    .nav-menu {
+        gap: 14px;
+        font-size: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .intro-layout,
+    .squad-layout,
+    .player-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .player-info {
+        border-left: none;
+        border-top: 4px solid var(--point-color);
+        padding-left: 0;
+        padding-top: 24px;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 18px 5%;
+    }
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .main-logo-box {
+        width: 150px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .intro-layout img,
+    .squad-layout img {
+        height: 230px;
+    }
+
+    .player-buttons {
+        gap: 12px;
+    }
+
+    .player-button img {
+        height: 240px;
+    }
+
+    .player-info {
+        min-height: 280px;
+    }
+
+    .player-card-bg img {
+        max-width: 240px;
+    }
+
+    .mode-buttons {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .mode-button {
+        width: 92px;
+        height: 92px;
+    }
+
+    .tier-list {
+        gap: 18px;
+    }
+
+    .tier-list img {
+        width: 100px;
+        height: 100px;
+        transition: none;
+        transform: none;
+    }
+
+    .tier-list img:hover {
+        transform: none;
+    }
+}
